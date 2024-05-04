@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "arial";
+}
+
+/* Header */
+.header-inner-content {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  background-color: rgb(37, 36, 36);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  box-shadow: 10px 0px 10px rgb(37, 36, 36);
+  z-index: 99;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  color: dodgerblue;
+}
+
+.logo span {
+  color: whitesmoke;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon-container img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.nav-icon-container img:first-child {
+  margin-right: 16px;
+}
+
+nav ul li {
+  color: whitesmoke;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  transform: translateY(-5px);
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+.menu-button {
+  display: none;
+}
+
+header {
+  background-image: radial-gradient(whitesmoke, lightgray);
+}
+
+.header-bottom-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.header-bottom-side-left {
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.header-bottom-side-left h2 {
+  font-size: 51px;
+  margin-bottom: 24px;
+}
+
+.header-bottom-side-left p {
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.header-bottom-side-left button {
+  background-color: dodgerblue;
+  border: none;
+  cursor: pointer;
+  padding: 13px 61px;
+  border-radius: 9999px;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.header-bottom-side-left button:hover {
+  background-color: rgb(10, 52, 94);
+}
+
+.header-bottom-side-right {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-bottom-side-right img {
+  width: 115%;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .logo {
+    font-size: 19px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .header-bottom-side {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 64px;
+  }
+
+  nav {
+    position: absolute;
+    background-color: rgb(37, 36, 36);
+    width: 100%;
+    top: 46px;
+    display: none;
+  }
+
+  .show-menu nav {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 13px;
+  }
+}
+/* Header */
+
+/* Main Content */
+main {
+  background-color: lightgray;
+}
+
+.gray-background {
+  background-color: rgb(37, 36, 36);
+}
+
+.page-inner-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cols {
+  display: grid;
+  justify-content: space-evenly;
+  padding: 64px 16px;
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.cols-3 img {
+  max-width: 100%;
+}
+
+.cols-4 img {
+  max-width: 100%;
+}
+
+.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cols > * {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cols > *:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 64px;
+  font-size: 29px;
+}
+
+.subtitle-underline {
+  width: 100px;
+  height: 5px;
+  background: dodgerblue;
+  border-radius: 9999px;
+  margin: 8px auto 0 auto;
+}
+
+.product {
+  color: rgb(37, 36, 36);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.rate {
+  color: dodgerblue;
+  font-size: 21px;
+}
+
+.exclusive-container {
+  color: whitesmoke;
+  flex-direction: row-reverse;
+  padding: 80px 16px;
+}
+
+.exclusive-container img {
+  max-width: 500px;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .section-title {
+    font-size: 16px;
+  }
+
+  .cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-name,
+  .product-price,
+  .rate {
+    max-height: 16px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+
+  .exclusive-container {
+    flex-direction: column-reverse;
+  }
+
+  .exclusive-container img {
+    margin-bottom: 64px;
+  }
+}
+/* Main Content*/
+
+/* Tstemonials */
+.testimonials {
+  display: flex;
+  padding: 64px 16px;
+  justify-content: space-evenly;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 30%;
+  text-align: center;
+  box-shadow: 0 0 15px gray;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  margin: 5px 0;
+}
+
+.testimonial p:first-child {
+  font-weight: bold;
+  font-size: 80px;
+  color: dodgerblue;
+  margin-top: 48px;
+  line-height: 32px;
+}
+
+.testimonial p:last-child {
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    margin-bottom: 19px;
+  }
+}
+/* Tstemonials */
+
+/* Footer */
+.footer-content {
+  display: flex;
+  align-items: center;
+  color: rgb(136, 135, 135);
+  padding: 64px 1px;
+  gap: 32px;
+}
+
+.download-options > * {
+  margin: 16px 0;
+}
+
+.download-options > p:first-child {
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.download-options > div {
+  display: flex;
+}
+
+.download-options > div img {
+  width: 180px;
+}
+
+.logo-footer {
+  text-align: center;
+}
+
+.links-footer h3 {
+  color: whitesmoke;
+  margin-bottom: 13px;
+}
+
+.links-footer ul {
+  list-style: none;
+}
+
+.links-footer ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.copyright {
+  color: whitesmoke;
+  padding: 32px 0;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .footer-content {
+    display: inline;
+    font-size: 13px;
+  }
+
+  .footer-content > div {
+    padding: 16px;
+  }
+
+  .download-options > div {
+    display: inline;
+  }
+
+  .download-options > div img {
+    width: 120px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
+/* Footer */
